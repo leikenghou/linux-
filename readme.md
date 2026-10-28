@@ -1,14 +1,16 @@
 # 一些指令用於優化Ubuntu
+## 點擊開啟／再次點擊最小化（隱藏）
+gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize-or-previews'
 
-# 省略sudo密碼
+## 省略sudo密碼
 vim /etc/sudoers
 ben 	ALL=(ALL:ALL) NOPASSWD:ALL
 
-# 安裝zsh與oh my zsh
+## 安裝zsh與oh my zsh
 sudo apt update && sudo apt install zsh -y
 https://ohmyz.sh/#install
 
-# oh my zsh 插件
+## oh my zsh 插件
 plugins=(git
 	 zsh-autosuggestions
 	 zsh-syntax-highlighting
@@ -16,7 +18,7 @@ plugins=(git
 	 extract
 	)
 
-# 安裝DRACULA_THEME
+## 安裝DRACULA_THEME
 git clone https://github.com/dracula/zsh.git
 DRACULA_THEME="$PWD/zsh"
 cp -r "$DRACULA_THEME/dracula.zsh-theme" "$DRACULA_THEME/lib" "${ZSH:-$HOME/.oh-my-zsh}/themes/"
@@ -25,6 +27,6 @@ Open ~/.zshrc and set:
 ZSH_THEME="dracula"
 source ~/.zshrc
 
-# dock欄美化
+## dock欄美化
 sudo apt install gnome-shell-extension-manager
-# 安裝blur my shell 與 dash in panel
+## 安裝blur my shell 與 dash in panel
